@@ -1,0 +1,30 @@
+def main():
+    valid = True
+    while valid:
+
+        print("Enter number of Students:")
+        No_students = floatcheck()
+        print("Enter team size:""Enter team size:")
+        Team_size = floatcheck()
+
+
+        if  not No_students < Team_size:
+            No_teams = divmod(No_students,Team_size)
+            valid = False
+            print("there will be ",No_teams[0]," Teams with ",No_teams[1],"Player/s Remaining")
+        else:
+            print("Sorry The values you inputted are false or no team can be made. Please Try again: ")
+
+
+def floatcheck():
+    check = True
+    while check:
+        X = float(input())
+        mod_of_x = X % 1
+        if  ((mod_of_x == 0) and (X>0)):
+            check = False
+            return X
+        else:
+            print("Please only enter a valid number :")
+
+main()
